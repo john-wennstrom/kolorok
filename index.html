@@ -4,11 +4,34 @@
 
        
             console.log("Hello world")
+
+            function clickHandler() {
+                console.log("You clicked me")
+                var n1 = document.getElementById("n1")
+                var n2 = document.getElementById("n2")
+
+                var a = document.getElementById("answer")
+
+                var answer = parseFloat(n1.value) + parseFloat(n2.value)
+
+                a.innerText = answer
+
+                console.log(answer)
+
+            }
+
+        
+
+
     </script>
     </head>
 <body>
     Hello world
-    <input type="text">
+    <input id="n1" type="number">
+    <input id="n2" type="number">
+    <button onclick="clickHandler()">Calculate</button>
+    <div id="answer" > 
+</div>
 
 </body>
 </html>
